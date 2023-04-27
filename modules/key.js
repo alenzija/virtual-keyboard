@@ -3,11 +3,6 @@ export default class {
     this.code = code;
     this.languages = languages;
     this.values = languages.en;
-    this.isActive = false;
-  }
-
-  toggleActive() {
-    this.isActive = !this.isActive;
   }
 
   setLanguage(lang) {

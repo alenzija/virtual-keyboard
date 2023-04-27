@@ -30,17 +30,19 @@ keys.forEach((element) => {
 container.append(keysContainer);
 
 document.addEventListener('keydown', (e) => {
-  keysClasses.forEach((key) => {
-    if (key.code === e.code) {
-      key.toggleActive();
+  const keyItems = keysContainer.querySelectorAll('.key');
+  keyItems.forEach((key) => {
+    if (key.dataset.code === e.code) {
+      key.classList.add('active');
     }
   });
 });
 
 document.addEventListener('keyup', (e) => {
-  keysClasses.forEach((key) => {
-    if (key.code === e.code) {
-      key.toggleActive();
+  const keyItems = keysContainer.querySelectorAll('.key');
+  keyItems.forEach((key) => {
+    if (key.dataset.code === e.code) {
+      key.classList.remove('active');
     }
   });
 });
@@ -83,22 +85,12 @@ document.addEventListener('keyup', (e) => {
 const backSpaceEvent = new Event('input');
 
 keysContainer.addEventListener('click', (event) => {
-  const { target } = event;
-  if (target.classList.contains('key')) {
-    if (target.dataset.code === 'Backspace') {
-      textArea.value = textArea.value.slice(0, -1);
-      textArea.dispatchEvent(backSpaceEvent);
-    } else {
-      textArea.value += keysOn.has('Shift') ? target.children[0].outerText || target.children[1].outerText.toUpperCase() : target.children[1].outerText;
-    }
-  }
-  if (target.parentElement.classList.contains('key')) {
-    if (target.parentElement.dataset.code === 'Backspace') {
-      textArea.value = textArea.value.slice(0, -1);
-      textArea.dispatchEvent(backSpaceEvent);
-    } else {
-      textArea.value += keysOn.has('Shift') ? target.parentElement.children[0].outerText || target.parentElement.children[1].outerText.toUpperCase() : target.parentElement.children[1].outerText;
-    }
+  const target = event.target.closest('.key');
+  if (target.dataset.code === 'Backspace') {
+    textArea.value = textArea.value.slice(0, -1);
+    textArea.dispatchEvent(backSpaceEvent);
+  } else {
+    textArea.value += keysOn.has('Shift') ? target.children[0].outerText || target.children[1].outerText.toUpperCase() : target.children[1].outerText;
   }
 });
 

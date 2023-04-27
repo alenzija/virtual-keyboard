@@ -11,13 +11,6 @@
         "sourceType": "module"
     },
     "rules": {
-        "linebreak-style": ["error", "windows"]
-    },
-    "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "js": "never"
-        }
-     ]
+        "import/extensions": [ "error", "ignorePackages", { "": "never" } ]
+    }
 }
