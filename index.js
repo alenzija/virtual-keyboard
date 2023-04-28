@@ -1,4 +1,4 @@
-import Key from './modules/key.js';
+import Key from './modules/character-key.js';
 
 const res = await fetch('keys.json');
 const keys = await res.json();

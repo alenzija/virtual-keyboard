@@ -1,8 +1,9 @@
-export default class {
-  constructor({ code, languages }) {
+export default class CharacterKey {
+  constructor({ code, languages, type }) {
     this.code = code;
     this.languages = languages;
     this.values = languages.en;
+    this.type = type;
   }
 
   setLanguage(lang) {
@@ -13,7 +14,7 @@ export default class {
 
   toggleCapsLock() {
     if (this.values[0].length === 1) {
-      if (this.values[0].toUpperCase() !== this.values[1].toLowerCase()) {
+      if (this.values[0].toUpperCase() !== this.values[0].toLowerCase()) {
         this.values[0] = this.values[0] === this.values[0].toUpperCase()
           ? this.values[0].toLowerCase()
           : this.values[0].toUpperCase();
@@ -21,10 +22,20 @@ export default class {
     }
   }
 
+  onClick(isShift) {
+    const event = new Event('input');
+    let res;
+    if (isShift && this.values[1] !== '') {
+      res += this.values[1];
+    } else {
+      res += this.value[0];
+    }
+    return { event, res };
+  }
+
   render() {
     const div = document.createElement('div');
     div.classList.add('key');
-    if (this.isActive) div.classList.add('active');
     div.dataset.code = this.code;
     div.innerHTML = `<span>${this.values[1]}</span>
                      <span>${this.values[0]}</span> `;
