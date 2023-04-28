@@ -12,9 +12,13 @@ body{
 }
 
 .keys{
-    width:100%;
+    margin: auto;
+    width: 89%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-content: center;
+    row-gap: 5px;
 }
 
 .key{

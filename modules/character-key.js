@@ -7,9 +7,7 @@ export default class CharacterKey {
   }
 
   setLanguage(lang) {
-    if (lang === 'ru' || lang === 'en') {
-      this.values = this.languages[lang];
-    }
+    this.values = this.languages[lang];
   }
 
   toggleCapsLock() {

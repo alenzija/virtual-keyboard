@@ -7,7 +7,7 @@ const keys = await res.json();
 
 const keysClasses = [];
 
-let lang = 'en';
+const lang = 'en';
 let isCapsLock = false;
 
 const keysOn = new Set();
@@ -48,6 +48,10 @@ document.addEventListener('keydown', (e) => {
   const keyItems = container.querySelectorAll('.key');
   keyItems.forEach((key) => {
     if (key.dataset.code === e.code) {
+      if (e.code === 'Tab') {
+        setTimeout(() => { key.classList.remove('active'); }, 200);
+        e.preventDefault();
+      }
       key.classList.add('active');
     }
   });
@@ -67,20 +71,16 @@ document.addEventListener('keyup', (e) => {
 document.addEventListener('keydown', (e) => {
   textArea.focus();
   textArea.selectionStart = textArea.value.length;
-  keysOn.add(e.key);
-  if (e.key === 'Shift' && keysOn.has('Control')) {
-    if (lang === 'en') {
-      lang = 'ru';
-    } else lang = 'en';
-
-    keyboard.setLanguage(lang);
+  keysOn.add(e.code);
+  if (e.code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
+    keyboard.changeLanguage(lang);
     document.querySelector('.keys').remove();
     container.append(keyboard.render());
   }
 });
 
 document.addEventListener('keyup', (e) => {
-  keysOn.delete(e.key);
+  keysOn.delete(e.code);
   if (e.key === 'CapsLock') {
     isCapsLock = !isCapsLock;
     keyboard.toggleCapsLock();
@@ -90,17 +90,21 @@ document.addEventListener('keyup', (e) => {
 });
 
 // clicks
-
 document.querySelector('.keys').addEventListener('click', (event) => {
   const target = event.target.closest('.key');
 
   if (!target) return;
+
   const { code } = target.dataset;
-  keysClasses.forEach((key) => {
-    if (key.code === code && key.type === 'character') {
-      textArea.value += key.onClick();
-    }
-  });
+  if (code === 'Backspace') {
+    textArea.value = textArea.value.slice(0, -1);
+  } else {
+    keysClasses.forEach((key) => {
+      if (key.code === code && key.type === 'character') {
+        textArea.value += key.onClick();
+      }
+    });
+  }
 });
 
 //

@@ -1,7 +1,7 @@
 export default class ModifierKey {
-  constructor({ code, value, type }) {
+  constructor({ code, name, type }) {
     this.code = code;
-    this.value = value;
+    this.name = name;
     this.type = type;
   }
 
@@ -10,7 +10,7 @@ export default class ModifierKey {
     div.classList.add('key');
     div.dataset.code = this.code;
     div.innerHTML = `<span></span>
-                     <span>${this.value}</span> `;
+                     <span>${this.name}</span> `;
     return div;
   }
 }

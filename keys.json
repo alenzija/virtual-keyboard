@@ -119,8 +119,132 @@
         "id": 13,  
         "type": "modifier",      
         "code": "Backspace",
-        "value": "backspace"
+        "name": "backspace"
+    },
+    {
+        "id": 14,  
+        "type": "modifier",      
+        "code": "Tab",
+        "name": "tab"
+    },
+    {
+        "id": 15,  
+        "type": "character",      
+        "code": "KeyQ",
+        "languages": {
+            "en": ["q", ""],
+            "ru": ["й", ""]
+        }
+    },
+    {
+        "id": 16,  
+        "type": "character",      
+        "code": "KeyW",
+        "languages": {
+            "en": ["w", ""],
+            "ru": ["ц", ""]
+        }
+    },
+    {
+        "id": 17,  
+        "type": "character",      
+        "code": "KeyE",
+        "languages": {
+            "en": ["e", ""],
+            "ru": ["у", ""]
+        }
+    },
+    {
+        "id": 18,  
+        "type": "character",      
+        "code": "KeyR",
+        "languages": {
+            "en": ["r", ""],
+            "ru": ["к", ""]
+        }
+    },
+    {
+        "id": 19,  
+        "type": "character",      
+        "code": "KeyT",
+        "languages": {
+            "en": ["t", ""],
+            "ru": ["е", ""]
+        }
+    },
+    {
+        "id": 20,  
+        "type": "character",      
+        "code": "KeyY",
+        "languages": {
+            "en": ["y", ""],
+            "ru": ["н", ""]
+        }
+    },
+    {
+        "id": 21,  
+        "type": "character",      
+        "code": "KeyU",
+        "languages": {
+            "en": ["u", ""],
+            "ru": ["г", ""]
+        }
+    },
+    {
+        "id": 22,  
+        "type": "character",      
+        "code": "KeyI",
+        "languages": {
+            "en": ["i", ""],
+            "ru": ["ш", ""]
+        }
+    },
+    {
+        "id": 23,  
+        "type": "character",      
+        "code": "KeyO",
+        "languages": {
+            "en": ["o", ""],
+            "ru": ["щ", ""]
+        }
+    },
+    {
+        "id": 24,  
+        "type": "character",      
+        "code": "KeyP",
+        "languages": {
+            "en": ["p", ""],
+            "ru": ["з", ""]
+        }
+    },
+    {
+        "id": 25,  
+        "type": "character",      
+        "code": "BracketLeft",
+        "languages": {
+            "en": ["[", "{"],
+            "ru": ["х", ""]
+        }
+    },
+    {
+        "id": 26,  
+        "type": "character",      
+        "code": "BracketRight",
+        "languages": {
+            "en": ["]", "}"],
+            "ru": ["ъ", ""]
+        }
+    },
+    {
+        "id": 27,  
+        "type": "character",      
+        "code": "Backslash",
+        "languages": {
+            "en": ["\\", "}"],
+            "ru": ["ъ", ""]
+        }
     }
+
 ]
 
  
