@@ -6,10 +6,10 @@ export default class Keyboard {
     this.keys = keys;
   }
 
-  setLang() {
+  setLanguage() {
     this.lang = (this.lang === 'ru') ? 'en' : 'ru';
     this.keys.forEach((key) => {
-      if (key.type === 'character') key.setLang(this.lang);
+      if (key.type === 'character') key.setLanguage(this.lang);
     });
   }
 

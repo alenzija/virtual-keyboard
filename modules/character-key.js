@@ -22,15 +22,8 @@ export default class CharacterKey {
     }
   }
 
-  onClick(isShift) {
-    const event = new Event('input');
-    let res;
-    if (isShift && this.values[1] !== '') {
-      res += this.values[1];
-    } else {
-      res += this.value[0];
-    }
-    return { event, res };
+  onClick(isShift = false) {
+    return isShift && this.values[1] !== '' ? this.values[1] : this.values[0];
   }
 
   render() {

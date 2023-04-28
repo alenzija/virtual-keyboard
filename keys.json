@@ -120,12 +120,6 @@
         "type": "modifier",      
         "code": "Backspace",
         "value": "backspace"
-    },
-    {
-        "id": 14,  
-        "type": "control",      
-        "code": "CapsLock",
-        "value": "caps lock"
     }
 ]
 

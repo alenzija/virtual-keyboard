@@ -5,12 +5,6 @@ export default class ModifierKey {
     this.type = type;
   }
 
-  setLanguage(lang) {
-    if (lang === 'ru' || lang === 'en') {
-      this.values = this.languages[lang];
-    }
-  }
-
   render() {
     const div = document.createElement('div');
     div.classList.add('key');
