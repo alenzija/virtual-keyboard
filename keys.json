@@ -240,8 +240,8 @@
         "type": "character",      
         "code": "Backslash",
         "languages": {
-            "en": ["\\", "}"],
-            "ru": ["ъ", ""]
+            "en": ["\\", "|"],
+            "ru": ["\\", "/"]
         }
     }
 

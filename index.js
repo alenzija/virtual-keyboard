@@ -7,8 +7,8 @@ const keys = await res.json();
 
 const keysClasses = [];
 
-const lang = 'en';
-let isCapsLock = false;
+const lang = 'ru';
+// let isCapsLock = false;
 
 const keysOn = new Set();
 
@@ -26,6 +26,7 @@ keys.forEach((element) => {
   switch (element.type) {
     case 'character': {
       key = new CharacterKey(element);
+      key.initLanguage(lang);
       break;
     }
     case 'modifier': {
@@ -40,9 +41,25 @@ keys.forEach((element) => {
   keysClasses.push(key);
 });
 
-const keyboard = new Keyboard(lang, keysOn, isCapsLock, keysClasses);
+const keyboard = new Keyboard(lang, keysOn, keysClasses);
+
+function changeValue(event) {
+  const target = event.target.closest('.key');
+  if (!target) return;
+  const { code } = target.dataset;
+  if (code === 'Backspace') {
+    textArea.value = textArea.value.slice(0, -1);
+  } else {
+    keysClasses.forEach((key) => {
+      if (key.code === code && key.type === 'character') {
+        textArea.value += key.onClick();
+      }
+    });
+  }
+}
 
 container.append(keyboard.render());
+document.querySelector('.keys').addEventListener('click', changeValue);
 
 document.addEventListener('keydown', (e) => {
   const keyItems = container.querySelectorAll('.key');
@@ -76,35 +93,38 @@ document.addEventListener('keydown', (e) => {
     keyboard.changeLanguage(lang);
     document.querySelector('.keys').remove();
     container.append(keyboard.render());
+    document.querySelector('.keys').addEventListener('click', changeValue);
   }
 });
 
 document.addEventListener('keyup', (e) => {
+  textArea.focus();
+  textArea.selectionStart = textArea.value.length;
   keysOn.delete(e.code);
   if (e.key === 'CapsLock') {
-    isCapsLock = !isCapsLock;
+    // isCapsLock = !isCapsLock;
     keyboard.toggleCapsLock();
+    // console.log(isCapsLock);
     document.querySelector('.keys').remove();
     container.append(keyboard.render());
+    document.querySelector('.keys').addEventListener('click', changeValue);
   }
 });
 
-// clicks
-document.querySelector('.keys').addEventListener('click', (event) => {
-  const target = event.target.closest('.key');
+// // clicks
+// document.querySelector('.keys').addEventListener('click', (event) => {
+//   const target = event.target.closest('.key');
+//   if (!target) return;
+//   const { code } = target.dataset;
+//   if (code === 'Backspace') {
+//     textArea.value = textArea.value.slice(0, -1);
+//   } else {
+//     keysClasses.forEach((key) => {
+//       if (key.code === code && key.type === 'character') {
+//         textArea.value += key.onClick();
+//       }
+//     });
+//   }
+// });
 
-  if (!target) return;
-
-  const { code } = target.dataset;
-  if (code === 'Backspace') {
-    textArea.value = textArea.value.slice(0, -1);
-  } else {
-    keysClasses.forEach((key) => {
-      if (key.code === code && key.type === 'character') {
-        textArea.value += key.onClick();
-      }
-    });
-  }
-});
-
-//
+// //
