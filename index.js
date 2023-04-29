@@ -9,6 +9,7 @@ const keysClasses = [];
 
 const lang = 'en';
 let isShift = false;
+let isCapsLock = false;
 const keysOn = new Set();
 
 const container = document.createElement('div');
@@ -93,7 +94,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-  const keyItems = container.querySelectorAll('.key');
+  let keyItems = container.querySelectorAll('.key');
   keyItems.forEach((key) => {
     if (key.dataset.code === e.code) {
       key.classList.remove('active');
@@ -109,9 +110,21 @@ document.addEventListener('keyup', (e) => {
   }
 
   if (e.key === 'CapsLock') {
+    isCapsLock = !isCapsLock;
     keyboard.toggleCapsLock();
     document.querySelector('.keys').remove();
     container.append(keyboard.render());
+
+    keyItems = container.querySelectorAll('.key');
+    keyItems.forEach((key) => {
+      if (key.dataset.code === 'CapsLock') {
+        if (isCapsLock) {
+          key.classList.add('active');
+        } else {
+          key.classList.remove('active');
+        }
+      }
+    });
     document.querySelector('.keys').addEventListener('click', changeValue);
   }
 });

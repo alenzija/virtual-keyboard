@@ -36,6 +36,7 @@ export default class CharacterKey {
   render() {
     const div = document.createElement('div');
     div.classList.add('key');
+    if (this.code === 'Space') div.classList.add('space');
     div.dataset.code = this.code;
     div.innerHTML = `<span>${this.values[1]}</span>
                      <span>${this.values[0]}</span> `;

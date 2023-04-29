@@ -266,6 +266,15 @@
         }
     },
     {
+        "id": 63,  
+        "type": "character",      
+        "code": "KeyS",
+        "languages": {
+            "en": ["s", ""],
+            "ru": ["ы", ""]
+        }
+    },
+    {
         "id": 30,  
         "type": "character",      
         "code": "KeyD",
@@ -377,6 +386,15 @@
         }
     },
     {
+        "id": 70,  
+        "type": "character",      
+        "code": "KeyC",
+        "languages": {
+            "en": ["c", ""],
+            "ru": ["с", ""]
+        }
+    },
+    {
         "id": 43,  
         "type": "character",      
         "code": "KeyV",
@@ -485,18 +503,6 @@
         "name": "alt"
     },
     {
-        "id": 56,  
-        "type": "modifier",      
-        "code": "ControlRight",
-        "name": "ctrl"
-    },
-    {
-        "id": 57,  
-        "type": "modifier",      
-        "code": "AltRight",
-        "name": "alt"
-    },
-    {
         "id": 58,  
         "type": "modifier",      
         "code": "ArrowLeft",
@@ -514,5 +520,11 @@
         "type": "modifier",      
         "code": "ArrowRight",
         "name": "→"
-    }    
+    },
+    {
+        "id": 56,  
+        "type": "modifier",      
+        "code": "ControlRight",
+        "name": "ctrl"
+    }
 ]

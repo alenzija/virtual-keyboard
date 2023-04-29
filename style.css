@@ -2,37 +2,48 @@ body{
     background-color: antiquewhite;
 }
 .container{
-    max-width:1280px;
+    width:1075px;
     margin: auto;
 }
 
 .textarea{
-    width: 100%;
-    height: 100px;
+    display: block;
+    margin: 10px auto;
 }
 
 .keys{
     margin: auto;
-    width: 89%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    row-gap: 5px;
+    gap: 5px;
+    background-color: #9e9e9e78;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px grey;
+    padding: 10px;
+
 }
 
 .key{
     height: 50px;
     min-width: 50px;
-    background-color:darkgrey;
+    background-color:#a9a9a9;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #878080;
     display: flex;
     position: relative;    
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 8px;
     cursor: pointer;
     user-select: none;
     transition: .3s;
+}
+
+.modifier{
+    background-color: #a79393;
 }
 
 .key:active,
@@ -44,4 +55,19 @@ body{
     position:absolute;    
     top: 2px;
     left: 5px;
+}
+
+.shift{
+    padding-right: 85px;
+}
+
+.capslock{
+    padding-right: 40px;
+}
+
+.enter{
+    padding-right: 65px;
+}
+.space{
+    width: 467px;
 }
