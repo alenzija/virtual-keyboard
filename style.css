@@ -56,17 +56,20 @@ body{
     top: 2px;
     left: 5px;
 }
+.backspace{
+    padding-right: 50px;
+}
 
 .shift{
     padding-right: 85px;
 }
 
 .capslock{
-    padding-right: 40px;
+    padding-right: 55px;
 }
 
 .enter{
-    padding-right: 65px;
+    padding-right: 80px;
 }
 .space{
     width: 467px;

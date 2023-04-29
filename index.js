@@ -51,7 +51,11 @@ function changeValue(event) {
   const target = event.target.closest('.key');
   if (!target) return;
   const { code } = target.dataset;
+  if (code === 'Delete') textArea.del();
   if (code === 'Tab') textArea.tab();
+  if (code === 'Enter') textArea.enter();
+  if (code === 'ArrowRight') textArea.toRight();
+  if (code === 'ArrowLeft') textArea.toLeft();
   if (code === 'Backspace') {
     textArea.backspace();
   } else {
@@ -82,7 +86,7 @@ document.querySelector('.keys').addEventListener('click', changeValue);
 document.addEventListener('keydown', (e) => {
   // textArea.onFocus();
   keysOn.add(e.code);
-
+  if (e.key === 'Alt') e.preventDefault();
   if (e.code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
     keyboard.changeLanguage(lang);
     document.querySelector('.keys').remove();
@@ -113,10 +117,17 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('keyup', (e) => {
 //  textArea.onFocus();
+  keysOn.delete(e.code);
   const keyItems = container.querySelectorAll('.key');
   keyItems.forEach((key) => {
     if (key.dataset.code === e.code) {
       key.classList.remove('active');
+    }
+  });
+
+  keysClasses.forEach((key) => {
+    if (key.type === 'character' && key.code === e.code) {
+      textArea.addValue(key.onClick(isShift));
     }
   });
 
