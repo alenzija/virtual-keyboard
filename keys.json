@@ -243,8 +243,276 @@
             "en": ["\\", "|"],
             "ru": ["\\", "/"]
         }
-    }
+    },
+    {
+        "id": 62,
+        "type": "modifier",
+        "code": "Delete",
+        "name": "del"
+    },
+    {
+        "id": 28,  
+        "type": "modifier",      
+        "code": "CapsLock",
+        "name": "caps lock"
+    },
+    {
+        "id": 29,  
+        "type": "character",      
+        "code": "KeyA",
+        "languages": {
+            "en": ["a", ""],
+            "ru": ["ф", ""]
+        }
+    },
+    {
+        "id": 30,  
+        "type": "character",      
+        "code": "KeyD",
+        "languages": {
+            "en": ["d", ""],
+            "ru": ["в", ""]
+        }
+    },
+    {
+        "id": 31,  
+        "type": "character",      
+        "code": "KeyF",
+        "languages": {
+            "en": ["f", ""],
+            "ru": ["а", ""]
+        }
+    },
+    {
+        "id": 32,  
+        "type": "character",      
+        "code": "KeyG",
+        "languages": {
+            "en": ["g", ""],
+            "ru": ["п", ""]
+        }
+    },
+    {
+        "id": 33,  
+        "type": "character",      
+        "code": "KeyH",
+        "languages": {
+            "en": ["h", ""],
+            "ru": ["р", ""]
+        }
+    },
+    {
+        "id": 34,  
+        "type": "character",      
+        "code": "KeyJ",
+        "languages": {
+            "en": ["j", ""],
+            "ru": ["о", ""]
+        }
+    },
+    {
+        "id": 35,  
+        "type": "character",      
+        "code": "KeyK",
+        "languages": {
+            "en": ["k", ""],
+            "ru": ["л", ""]
+        }
+    },
+    {
+        "id": 36,  
+        "type": "character",      
+        "code": "KeyL",
+        "languages": {
+            "en": ["l", ""],
+            "ru": ["д", ""]
+        }
+    },
+    {
+        "id": 37,  
+        "type": "character",      
+        "code": "Semicolon",
+        "languages": {
+            "en": [";", ":"],
+            "ru": ["ж", ""]
+        }
+    },
+    {
+        "id": 38,  
+        "type": "character",      
+        "code": "Quote",
+        "languages": {
+            "en": ["'", "\""],
+            "ru": ["э", ""]
+        }
+    },
+    {
+        "id": 39,  
+        "type": "modifier",      
+        "code": "Enter",
+        "name": "enter"
+    },
+    {
+        "id": 40,  
+        "type": "modifier",      
+        "code": "ShiftLeft",
+        "name": "shift"
+    },
+    {
+        "id": 41,  
+        "type": "character",      
+        "code": "KeyZ",
+        "languages": {
+            "en": ["z", ""],
+            "ru": ["я", ""]
+        }
+    },
+    {
+        "id": 42,  
+        "type": "character",      
+        "code": "KeyX",
+        "languages": {
+            "en": ["x", ""],
+            "ru": ["ч", ""]
+        }
+    },
+    {
+        "id": 43,  
+        "type": "character",      
+        "code": "KeyV",
+        "languages": {
+            "en": ["v", ""],
+            "ru": ["м", ""]
+        }
+    },
+    {
+        "id": 44,  
+        "type": "character",      
+        "code": "KeyB",
+        "languages": {
+            "en": ["b", ""],
+            "ru": ["и", ""]
+        }
+    },
+    {
+        "id": 45,  
+        "type": "character",      
+        "code": "KeyN",
+        "languages": {
+            "en": ["n", ""],
+            "ru": ["т", ""]
+        }
+    },
+    {
+        "id": 46,  
+        "type": "character",      
+        "code": "KeyM",
+        "languages": {
+            "en": ["m", ""],
+            "ru": ["ь", ""]
+        }
+    },
+    {
+        "id": 47,  
+        "type": "character",      
+        "code": "Comma",
+        "languages": {
+            "en": [",", "<"],
+            "ru": ["б", ""]
+        }
+    },
+    {
+        "id": 48,  
+        "type": "character",      
+        "code": "Period",
+        "languages": {
+            "en": [".", ">"],
+            "ru": ["ю", ""]
+        }
+    },
+    {
+        "id": 49,  
+        "type": "character",      
+        "code": "Slash",
+        "languages": {
+            "en": ["/", "?"],
+            "ru": [".", ","]
+        }
+    },
+    {
+        "id": 59,  
+        "type": "modifier",      
+        "code": "ArrowUp",
+        "name": "↑"
+    },
+    {
+        "id": 50,  
+        "type": "modifier",      
+        "code": "ShiftRight",
+        "name": "shift"
+    },
+    {
+        "id": 51,  
+        "type": "modifier",      
+        "code": "ControlLeft",
+        "name": "ctrl"
+    },
+    {
+        "id": 52,  
+        "type": "modifier",      
+        "code": "MetaLeft",
+        "name": "win"
+    },
+    {
+        "id": 53,  
+        "type": "modifier",      
+        "code": "AltLeft",
+        "name": "alt"
+    },
+    {
+        "id": 54,  
+        "type": "character",      
+        "code": "Space",
+        "languages": {
+            "en": [" ", ""],
+            "ru": [" ", ""]
+        }
+    },
+    {
+        "id": 55,  
+        "type": "modifier",      
+        "code": "AltRight",
+        "name": "alt"
+    },
+    {
+        "id": 56,  
+        "type": "modifier",      
+        "code": "ControlRight",
+        "name": "ctrl"
+    },
+    {
+        "id": 57,  
+        "type": "modifier",      
+        "code": "AltRight",
+        "name": "alt"
+    },
+    {
+        "id": 58,  
+        "type": "modifier",      
+        "code": "ArrowLeft",
+        "name": "←"
+    },
 
+    {
+        "id": 60,  
+        "type": "modifier",      
+        "code": "ArrowDown",
+        "name": "↓"
+    },
+    {
+        "id": 61,  
+        "type": "modifier",      
+        "code": "ArrowRight",
+        "name": "→"
+    }    
 ]
-
- 

@@ -63,6 +63,23 @@ container.append(keyboard.render());
 document.querySelector('.keys').addEventListener('click', changeValue);
 
 document.addEventListener('keydown', (e) => {
+  textArea.focus();
+  textArea.selectionStart = textArea.value.length;
+  keysOn.add(e.code);
+
+  if (e.code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
+    keyboard.changeLanguage(lang);
+    document.querySelector('.keys').remove();
+    container.append(keyboard.render());
+    document.querySelector('.keys').addEventListener('click', changeValue);
+  } else if (e.key === 'Shift' && !isShift) {
+    isShift = true;
+    keyboard.toggleCapsLock();
+    document.querySelector('.keys').remove();
+    container.append(keyboard.render());
+    document.querySelector('.keys').addEventListener('click', changeValue);
+  }
+
   const keyItems = container.querySelectorAll('.key');
   keyItems.forEach((key) => {
     if (key.dataset.code === e.code) {
@@ -82,34 +99,8 @@ document.addEventListener('keyup', (e) => {
       key.classList.remove('active');
     }
   });
-});
 
-// Смена языка
-
-document.addEventListener('keydown', (e) => {
-  textArea.focus();
-  textArea.selectionStart = textArea.value.length;
-  keysOn.add(e.code);
-  if (e.key === 'Shift' && !isShift) {
-    isShift = true;
-    keyboard.toggleCapsLock();
-    document.querySelector('.keys').remove();
-    container.append(keyboard.render());
-    document.querySelector('.keys').addEventListener('click', changeValue);
-  }
-  if (e.code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
-    keyboard.changeLanguage(lang);
-    document.querySelector('.keys').remove();
-    container.append(keyboard.render());
-    document.querySelector('.keys').addEventListener('click', changeValue);
-  }
-});
-
-document.addEventListener('keyup', (e) => {
-  textArea.focus();
-  textArea.selectionStart = textArea.value.length;
-  keysOn.delete(e.code);
-  if (e.key === 'Shift') {
+  if (e.key === 'Shift' && isShift) {
     isShift = false;
     keyboard.toggleCapsLock();
     document.querySelector('.keys').remove();
@@ -124,3 +115,5 @@ document.addEventListener('keyup', (e) => {
     document.querySelector('.keys').addEventListener('click', changeValue);
   }
 });
+
+// Смена языка
