@@ -4,7 +4,7 @@ export default class CharacterKey {
   }) {
     this.code = code;
     this.languages = languages;
-    // this.values = languages.en;
+    this.values = languages.en;
     this.type = type;
     this.isCapsLock = isCapsLock;
   }
@@ -29,7 +29,7 @@ export default class CharacterKey {
     }
   }
 
-  onClick(isShift = false) {
+  onClick(isShift) {
     return isShift && this.values[1] !== '' ? this.values[1] : this.values[0];
   }
 

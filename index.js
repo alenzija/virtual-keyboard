@@ -7,9 +7,8 @@ const keys = await res.json();
 
 const keysClasses = [];
 
-const lang = 'ru';
-// let isCapsLock = false;
-
+const lang = 'en';
+let isShift = false;
 const keysOn = new Set();
 
 const container = document.createElement('div');
@@ -44,6 +43,8 @@ keys.forEach((element) => {
 const keyboard = new Keyboard(lang, keysOn, keysClasses);
 
 function changeValue(event) {
+  textArea.focus();
+  textArea.selectionStart = textArea.value.length;
   const target = event.target.closest('.key');
   if (!target) return;
   const { code } = target.dataset;
@@ -52,7 +53,7 @@ function changeValue(event) {
   } else {
     keysClasses.forEach((key) => {
       if (key.code === code && key.type === 'character') {
-        textArea.value += key.onClick();
+        textArea.value += key.onClick(isShift);
       }
     });
   }
@@ -66,8 +67,8 @@ document.addEventListener('keydown', (e) => {
   keyItems.forEach((key) => {
     if (key.dataset.code === e.code) {
       if (e.code === 'Tab') {
-        setTimeout(() => { key.classList.remove('active'); }, 200);
         e.preventDefault();
+        setTimeout(() => { key.classList.remove('active'); }, 200);
       }
       key.classList.add('active');
     }
@@ -89,6 +90,13 @@ document.addEventListener('keydown', (e) => {
   textArea.focus();
   textArea.selectionStart = textArea.value.length;
   keysOn.add(e.code);
+  if (e.key === 'Shift' && !isShift) {
+    isShift = true;
+    keyboard.toggleCapsLock();
+    document.querySelector('.keys').remove();
+    container.append(keyboard.render());
+    document.querySelector('.keys').addEventListener('click', changeValue);
+  }
   if (e.code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
     keyboard.changeLanguage(lang);
     document.querySelector('.keys').remove();
@@ -101,30 +109,18 @@ document.addEventListener('keyup', (e) => {
   textArea.focus();
   textArea.selectionStart = textArea.value.length;
   keysOn.delete(e.code);
-  if (e.key === 'CapsLock') {
-    // isCapsLock = !isCapsLock;
+  if (e.key === 'Shift') {
+    isShift = false;
     keyboard.toggleCapsLock();
-    // console.log(isCapsLock);
+    document.querySelector('.keys').remove();
+    container.append(keyboard.render());
+    document.querySelector('.keys').addEventListener('click', changeValue);
+  }
+
+  if (e.key === 'CapsLock') {
+    keyboard.toggleCapsLock();
     document.querySelector('.keys').remove();
     container.append(keyboard.render());
     document.querySelector('.keys').addEventListener('click', changeValue);
   }
 });
-
-// // clicks
-// document.querySelector('.keys').addEventListener('click', (event) => {
-//   const target = event.target.closest('.key');
-//   if (!target) return;
-//   const { code } = target.dataset;
-//   if (code === 'Backspace') {
-//     textArea.value = textArea.value.slice(0, -1);
-//   } else {
-//     keysClasses.forEach((key) => {
-//       if (key.code === code && key.type === 'character') {
-//         textArea.value += key.onClick();
-//       }
-//     });
-//   }
-// });
-
-// //
