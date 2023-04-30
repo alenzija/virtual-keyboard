@@ -2,14 +2,12 @@ import CharacterKey from './character-key.js';
 import ModifierKey from './modifier-key.js';
 
 export default class Keyboard {
-  constructor(lang, setOnKeys) {
+  constructor(lang, isCapsLock) {
     this.keyboard = document.createElement('div');
     this.keyboard.className = 'keys';
-
     this.lang = lang;
-    this.setOnKeys = setOnKeys;
     this.keys = [];
-    this.isCapsLock = false;
+    this.isCapsLock = isCapsLock;
   }
 
   async init() {

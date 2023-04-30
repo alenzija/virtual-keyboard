@@ -51,6 +51,7 @@ body{
     background-color:rgb(131, 129, 129);
 }
 
+
 .key>span:nth-child(1){
     position:absolute;    
     top: 2px;

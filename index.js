@@ -18,7 +18,7 @@ textArea.onFocus();
 document.querySelector('textarea').addEventListener('blur', () => textArea.onFocus());
 document.addEventListener('keyup', () => { textArea.cursor = textArea.textArea.selectionStart; });
 
-const keyboard = new Keyboard(lang, keysOn, isCapsLock);
+const keyboard = new Keyboard(lang, isCapsLock);
 await keyboard.init();
 container.append(keyboard.render());
 
@@ -67,9 +67,9 @@ const changeValue = (event) => {
     keyboard.toggleCapsLock();
     toggleActiveCapsLock();
   }
-  if ((code === 'ShiftLeft' || code === 'ShiftRight')) {
-    isShift = true;
-    keyboard.toggleCapsLock();
+  if (code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
+    keyboard.changeLanguage(lang);
+    keyboard.render();
     toggleActiveCapsLock();
   }
   keyboard.keys.forEach((key) => {
@@ -80,6 +80,39 @@ const changeValue = (event) => {
 };
 
 document.querySelector('.keys').addEventListener('click', changeValue);
+
+document.addEventListener('mousedown', (event) => {
+  const target = event.target.closest('.key');
+  if (!target) return;
+  const { code } = target.dataset;
+  if ((code === 'ShiftLeft' || code === 'ShiftRight') && !keysOn.has('ControlLeft')) {
+    keyboard.toggleCapsLock();
+    toggleActiveCapsLock();
+    document.querySelectorAll('.shift').forEach((item) => {
+      if (item.dataset.code === code) item.classList.add('active');
+    });
+  }
+});
+
+document.addEventListener('mouseup', (event) => {
+  const target = event.target.closest('.key');
+  if (!target) return;
+  const { code } = target.dataset;
+  if ((code === 'ShiftLeft' || code === 'ShiftRight') && !keysOn.has('ControlLeft')) {
+    keyboard.toggleCapsLock();
+    toggleActiveCapsLock();
+  }
+});
+
+document.addEventListener('mouseout', (event) => {
+  const target = event.target.closest('.key');
+  if (!target) return;
+  const { code } = target.dataset;
+  if (target.classList.contains('active') && (code === 'ShiftLeft' || code === 'ShiftRight') && !keysOn.has('ControlLeft')) {
+    keyboard.toggleCapsLock();
+    toggleActiveCapsLock();
+  }
+});
 
 document.addEventListener('keydown', (e) => {
   keysOn.add(e.code);
