@@ -1,0 +1,530 @@
+[
+    {
+        "id": 0,
+        "type": "character",
+        "code": "Backquote",
+        "languages": {
+            "en": ["`", "~"],
+            "ru": ["ё", ""]
+        }
+    },
+    {
+        "id": 1,
+        "type": "character",
+        "code": "Digit1",
+        "languages": {
+            "en": ["1", "!"],
+            "ru": ["1", "!"]}
+    },
+    {
+        "id": 2,
+        "code": "Digit2",
+        "type": "character",
+        "languages": {
+            "en": ["2", "@"],
+            "ru": ["2", "\""]
+        }
+    },
+    {
+        "id": 3,
+        "code": "Digit3",
+        "type": "character",
+        "languages": {
+            "en": ["3", "#"],
+            "ru": ["3", "№"]
+        }
+    },
+    {
+        "id": 4,
+        "code": "Digit4",
+        "type": "character",
+        "languages": {
+            "en": ["4", "$"],
+            "ru": ["4", ";"]
+        }
+    },
+    {
+        "id": 5,
+        "code": "Digit5",
+        "type": "character",
+        "languages": {
+            "en": ["5", "%"],
+            "ru": ["5", "%"]
+        }
+    },
+    {
+        "id": 6,
+        "code": "Digit6",
+        "type": "character",
+        "languages": {
+            "en": ["6", "^"],
+            "ru": ["6", ":"]
+        }
+    },
+    {
+        "id": 7,
+        "code": "Digit7",
+        "type": "character",
+        "languages": {
+            "en": ["7", "&"],
+            "ru": ["7", "?"]
+        }
+    },
+    {
+        "id": 8,
+        "code": "Digit8",
+        "type": "character",
+        "languages": {
+            "en": ["8", "*"],
+            "ru": ["8", "*"]
+        }
+    },
+    {
+        "id": 9,
+        "code": "Digit9",
+        "type": "character",
+        "languages": {
+            "en": ["9", "("],
+            "ru": ["9", "("]
+        }
+    },
+    {
+        "id": 10,
+        "code": "Digit0",
+        "type": "character",
+        "languages": {
+            "en": ["0", ")"],
+            "ru": ["0", ")"]
+        }
+    },
+    {
+        "id": 11,
+        "code": "Minus",
+        "type": "character",
+        "languages": {
+            "en": ["-", "_"],
+            "ru": ["-", "_"]
+        }
+    },
+    {
+        "id": 12,
+        "code": "Equal",
+        "type": "character",
+        "languages": {
+            "en": ["=", "+"],
+            "ru": ["=", "+"]
+        }
+    },
+    {
+        "id": 13,  
+        "type": "modifier",      
+        "code": "Backspace",
+        "name": "backspace"
+    },
+    {
+        "id": 14,  
+        "type": "modifier",      
+        "code": "Tab",
+        "name": "tab"
+    },
+    {
+        "id": 15,  
+        "type": "character",      
+        "code": "KeyQ",
+        "languages": {
+            "en": ["q", ""],
+            "ru": ["й", ""]
+        }
+    },
+    {
+        "id": 16,  
+        "type": "character",      
+        "code": "KeyW",
+        "languages": {
+            "en": ["w", ""],
+            "ru": ["ц", ""]
+        }
+    },
+    {
+        "id": 17,  
+        "type": "character",      
+        "code": "KeyE",
+        "languages": {
+            "en": ["e", ""],
+            "ru": ["у", ""]
+        }
+    },
+    {
+        "id": 18,  
+        "type": "character",      
+        "code": "KeyR",
+        "languages": {
+            "en": ["r", ""],
+            "ru": ["к", ""]
+        }
+    },
+    {
+        "id": 19,  
+        "type": "character",      
+        "code": "KeyT",
+        "languages": {
+            "en": ["t", ""],
+            "ru": ["е", ""]
+        }
+    },
+    {
+        "id": 20,  
+        "type": "character",      
+        "code": "KeyY",
+        "languages": {
+            "en": ["y", ""],
+            "ru": ["н", ""]
+        }
+    },
+    {
+        "id": 21,  
+        "type": "character",      
+        "code": "KeyU",
+        "languages": {
+            "en": ["u", ""],
+            "ru": ["г", ""]
+        }
+    },
+    {
+        "id": 22,  
+        "type": "character",      
+        "code": "KeyI",
+        "languages": {
+            "en": ["i", ""],
+            "ru": ["ш", ""]
+        }
+    },
+    {
+        "id": 23,  
+        "type": "character",      
+        "code": "KeyO",
+        "languages": {
+            "en": ["o", ""],
+            "ru": ["щ", ""]
+        }
+    },
+    {
+        "id": 24,  
+        "type": "character",      
+        "code": "KeyP",
+        "languages": {
+            "en": ["p", ""],
+            "ru": ["з", ""]
+        }
+    },
+    {
+        "id": 25,  
+        "type": "character",      
+        "code": "BracketLeft",
+        "languages": {
+            "en": ["[", "{"],
+            "ru": ["х", ""]
+        }
+    },
+    {
+        "id": 26,  
+        "type": "character",      
+        "code": "BracketRight",
+        "languages": {
+            "en": ["]", "}"],
+            "ru": ["ъ", ""]
+        }
+    },
+    {
+        "id": 27,  
+        "type": "character",      
+        "code": "Backslash",
+        "languages": {
+            "en": ["\\", "|"],
+            "ru": ["\\", "/"]
+        }
+    },
+    {
+        "id": 62,
+        "type": "modifier",
+        "code": "Delete",
+        "name": "del"
+    },
+    {
+        "id": 28,  
+        "type": "modifier",      
+        "code": "CapsLock",
+        "name": "caps lock"
+    },
+    {
+        "id": 29,  
+        "type": "character",      
+        "code": "KeyA",
+        "languages": {
+            "en": ["a", ""],
+            "ru": ["ф", ""]
+        }
+    },
+    {
+        "id": 63,  
+        "type": "character",      
+        "code": "KeyS",
+        "languages": {
+            "en": ["s", ""],
+            "ru": ["ы", ""]
+        }
+    },
+    {
+        "id": 30,  
+        "type": "character",      
+        "code": "KeyD",
+        "languages": {
+            "en": ["d", ""],
+            "ru": ["в", ""]
+        }
+    },
+    {
+        "id": 31,  
+        "type": "character",      
+        "code": "KeyF",
+        "languages": {
+            "en": ["f", ""],
+            "ru": ["а", ""]
+        }
+    },
+    {
+        "id": 32,  
+        "type": "character",      
+        "code": "KeyG",
+        "languages": {
+            "en": ["g", ""],
+            "ru": ["п", ""]
+        }
+    },
+    {
+        "id": 33,  
+        "type": "character",      
+        "code": "KeyH",
+        "languages": {
+            "en": ["h", ""],
+            "ru": ["р", ""]
+        }
+    },
+    {
+        "id": 34,  
+        "type": "character",      
+        "code": "KeyJ",
+        "languages": {
+            "en": ["j", ""],
+            "ru": ["о", ""]
+        }
+    },
+    {
+        "id": 35,  
+        "type": "character",      
+        "code": "KeyK",
+        "languages": {
+            "en": ["k", ""],
+            "ru": ["л", ""]
+        }
+    },
+    {
+        "id": 36,  
+        "type": "character",      
+        "code": "KeyL",
+        "languages": {
+            "en": ["l", ""],
+            "ru": ["д", ""]
+        }
+    },
+    {
+        "id": 37,  
+        "type": "character",      
+        "code": "Semicolon",
+        "languages": {
+            "en": [";", ":"],
+            "ru": ["ж", ""]
+        }
+    },
+    {
+        "id": 38,  
+        "type": "character",      
+        "code": "Quote",
+        "languages": {
+            "en": ["'", "\""],
+            "ru": ["э", ""]
+        }
+    },
+    {
+        "id": 39,  
+        "type": "modifier",      
+        "code": "Enter",
+        "name": "enter"
+    },
+    {
+        "id": 40,  
+        "type": "modifier",      
+        "code": "ShiftLeft",
+        "name": "shift"
+    },
+    {
+        "id": 41,  
+        "type": "character",      
+        "code": "KeyZ",
+        "languages": {
+            "en": ["z", ""],
+            "ru": ["я", ""]
+        }
+    },
+    {
+        "id": 42,  
+        "type": "character",      
+        "code": "KeyX",
+        "languages": {
+            "en": ["x", ""],
+            "ru": ["ч", ""]
+        }
+    },
+    {
+        "id": 70,  
+        "type": "character",      
+        "code": "KeyC",
+        "languages": {
+            "en": ["c", ""],
+            "ru": ["с", ""]
+        }
+    },
+    {
+        "id": 43,  
+        "type": "character",      
+        "code": "KeyV",
+        "languages": {
+            "en": ["v", ""],
+            "ru": ["м", ""]
+        }
+    },
+    {
+        "id": 44,  
+        "type": "character",      
+        "code": "KeyB",
+        "languages": {
+            "en": ["b", ""],
+            "ru": ["и", ""]
+        }
+    },
+    {
+        "id": 45,  
+        "type": "character",      
+        "code": "KeyN",
+        "languages": {
+            "en": ["n", ""],
+            "ru": ["т", ""]
+        }
+    },
+    {
+        "id": 46,  
+        "type": "character",      
+        "code": "KeyM",
+        "languages": {
+            "en": ["m", ""],
+            "ru": ["ь", ""]
+        }
+    },
+    {
+        "id": 47,  
+        "type": "character",      
+        "code": "Comma",
+        "languages": {
+            "en": [",", "<"],
+            "ru": ["б", ""]
+        }
+    },
+    {
+        "id": 48,  
+        "type": "character",      
+        "code": "Period",
+        "languages": {
+            "en": [".", ">"],
+            "ru": ["ю", ""]
+        }
+    },
+    {
+        "id": 49,  
+        "type": "character",      
+        "code": "Slash",
+        "languages": {
+            "en": ["/", "?"],
+            "ru": [".", ","]
+        }
+    },
+    {
+        "id": 59,  
+        "type": "modifier",      
+        "code": "ArrowUp",
+        "name": "↑"
+    },
+    {
+        "id": 50,  
+        "type": "modifier",      
+        "code": "ShiftRight",
+        "name": "shift"
+    },
+    {
+        "id": 51,  
+        "type": "modifier",      
+        "code": "ControlLeft",
+        "name": "ctrl"
+    },
+    {
+        "id": 52,  
+        "type": "modifier",      
+        "code": "MetaLeft",
+        "name": "win"
+    },
+    {
+        "id": 53,  
+        "type": "modifier",      
+        "code": "AltLeft",
+        "name": "alt"
+    },
+    {
+        "id": 54,  
+        "type": "character",      
+        "code": "Space",
+        "languages": {
+            "en": [" ", ""],
+            "ru": [" ", ""]
+        }
+    },
+    {
+        "id": 55,  
+        "type": "modifier",      
+        "code": "AltRight",
+        "name": "alt"
+    },
+    {
+        "id": 58,  
+        "type": "modifier",      
+        "code": "ArrowLeft",
+        "name": "←"
+    },
+
+    {
+        "id": 60,  
+        "type": "modifier",      
+        "code": "ArrowDown",
+        "name": "↓"
+    },
+    {
+        "id": 61,  
+        "type": "modifier",      
+        "code": "ArrowRight",
+        "name": "→"
+    },
+    {
+        "id": 56,  
+        "type": "modifier",      
+        "code": "ControlRight",
+        "name": "ctrl"
+    }
+]
