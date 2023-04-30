@@ -1,14 +1,19 @@
 import Keyboard from './modules/keyboard.js';
 import TextArea from './modules/text-area.js';
 
-const lang = 'en';
+const lang = localStorage.getItem('lang') || 'en';
 let isShift = false;
 let isCapsLock = false;
 const keysOn = new Set();
 
 const container = document.createElement('div');
 container.className = 'container';
-// textarea
+
+const title = document.createElement('h1');
+title.className = 'title';
+title.textContent = 'Virtual Keyboard';
+container.append(title);
+
 const textArea = new TextArea(10, 140);
 container.append(textArea.get());
 
@@ -21,6 +26,12 @@ document.addEventListener('keyup', () => { textArea.cursor = textArea.textArea.s
 const keyboard = new Keyboard(lang, isCapsLock);
 await keyboard.init();
 container.append(keyboard.render());
+
+const description = document.createElement('div');
+description.className = 'description';
+description.innerHTML = `<p>Virtual Keyboard has been created in Windows</p>
+                         <p>For changing languages use <span>left Control + left Shift</span></p>`;
+container.append(description);
 
 const onActiveKey = (event) => {
   const keyItems = document.querySelectorAll('.key');

@@ -1,17 +1,22 @@
-body{
+body {
     background-color: antiquewhite;
+    font-size: 18px;
 }
-.container{
+.container {
     width:1075px;
     margin: auto;
 }
 
-.textarea{
+.title {
+    text-align: center;
+}
+
+.textarea {
     display: block;
     margin: 10px auto;
 }
 
-.keys{
+.keys {
     margin: auto;
     width: 100%;
     display: flex;
@@ -26,7 +31,7 @@ body{
 
 }
 
-.key{
+.key {
     height: 50px;
     min-width: 50px;
     background-color:#a9a9a9;
@@ -42,36 +47,43 @@ body{
     transition: .3s;
 }
 
-.modifier{
+.modifier {
     background-color: #a79393;
 }
 
 .key:active,
-.active{
+.active {
     background-color:rgb(131, 129, 129);
 }
 
 
-.key>span:nth-child(1){
+.key>span:nth-child(1) {
     position:absolute;    
     top: 2px;
     left: 5px;
 }
-.backspace{
+.backspace {
     padding-right: 50px;
 }
 
-.shift{
+.shift {
     padding-right: 85px;
 }
 
-.capslock{
+.capslock {
     padding-right: 55px;
 }
 
-.enter{
+.enter {
     padding-right: 80px;
 }
-.space{
+.space {
     width: 467px;
+}
+
+.description {
+    text-align: center;
+}
+.description span {
+    text-decoration: underline;
 }
