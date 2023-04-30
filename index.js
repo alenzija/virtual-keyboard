@@ -44,7 +44,7 @@ const offActiveKey = (event) => {
   });
 };
 
-const doActiveCapsLock = () => {
+const onActiveCapsLock = () => {
   const keyItems = container.querySelectorAll('.key');
   keyItems.forEach((key) => {
     if (key.dataset.code === 'CapsLock') {
@@ -66,6 +66,8 @@ const changeValue = (event) => {
   if (code === 'Enter') textArea.enter();
   if (code === 'ArrowRight') textArea.toRight();
   if (code === 'ArrowLeft') textArea.toLeft();
+  if (code === 'ArrowUp') textArea.toUp();
+  if (code === 'ArrowDown') textArea.toDown();
   if (code === 'Backspace') {
     textArea.backspace();
   } else {
@@ -86,13 +88,13 @@ document.addEventListener('keydown', (e) => {
   if (e.code === 'ShiftLeft' && keysOn.has('ControlLeft')) {
     keyboard.changeLanguage(lang);
     container.append(keyboard.render());
-    doActiveCapsLock();
+    onActiveCapsLock();
     document.querySelector('.keys').addEventListener('click', changeValue);
   } else if (e.key === 'Shift' && !isShift) {
     isShift = true;
     keyboard.toggleCapsLock();
     container.append(keyboard.render());
-    doActiveCapsLock();
+    onActiveCapsLock();
     document.querySelector('.keys').addEventListener('click', changeValue);
   }
   onActiveKey(e);
@@ -112,7 +114,7 @@ document.addEventListener('keyup', (e) => {
     isShift = false;
     keyboard.toggleCapsLock();
     container.append(keyboard.render());
-    doActiveCapsLock();
+    onActiveCapsLock();
     document.querySelector('.keys').addEventListener('click', changeValue);
   }
 
@@ -120,7 +122,7 @@ document.addEventListener('keyup', (e) => {
     isCapsLock = !isCapsLock;
     keyboard.toggleCapsLock();
     container.append(keyboard.render());
-    doActiveCapsLock();
+    onActiveCapsLock();
     document.querySelector('.keys').addEventListener('click', changeValue);
   }
 });
