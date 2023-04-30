@@ -88,6 +88,7 @@ export default class TextArea {
   }
 
   setIndex(i, j) {
+    if (j < 0) return 0;
     let cursor = 0;
     let row = 0;
     let cols = 0;
@@ -120,7 +121,7 @@ export default class TextArea {
       }
       cursor += 1;
     }
-    if (row !== j) cursor = this.cursor;
+    if (row !== j) cursor = this.value.length;
     return cursor;
   }
 
@@ -151,5 +152,45 @@ export default class TextArea {
       }
     });
     return this.textArea;
+  }
+
+  onChange(code) {
+    switch (code) {
+      case 'Delete': {
+        this.del();
+        break;
+      }
+      case 'Tab': {
+        this.tab();
+        break;
+      }
+      case 'Enter': {
+        this.enter();
+        break;
+      }
+      case 'ArrowRight': {
+        this.toRight();
+        break;
+      }
+      case 'ArrowLeft': {
+        this.toLeft();
+        break;
+      }
+      case 'ArrowUp': {
+        this.toUp();
+        break;
+      }
+      case 'ArrowDown': {
+        this.toDown();
+        break;
+      }
+      case 'Backspace': {
+        this.backspace();
+        break;
+      }
+      default: {
+        break;
+      }
+    }
   }
 }

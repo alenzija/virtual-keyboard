@@ -2,12 +2,14 @@ import CharacterKey from './character-key.js';
 import ModifierKey from './modifier-key.js';
 
 export default class Keyboard {
-  constructor(lang, setOnKeys, isCapsLock) {
+  constructor(lang, setOnKeys) {
     this.keyboard = document.createElement('div');
+    this.keyboard.className = 'keys';
+
     this.lang = lang;
     this.setOnKeys = setOnKeys;
     this.keys = [];
-    this.isCapsLock = isCapsLock;
+    this.isCapsLock = false;
   }
 
   async init() {
@@ -46,26 +48,12 @@ export default class Keyboard {
     this.keys.forEach((key) => {
       if (key.type === 'character') key.toggleCapsLock();
     });
+    this.render();
   }
 
   render() {
     this.keyboard.innerHTML = '';
-    this.keyboard.className = 'keys';
-    this.keys.forEach((key) => {
-      switch (key.type) {
-        case 'character': {
-          break;
-        }
-        case 'modifier': {
-          break;
-        }
-        case 'control': {
-          break;
-        }
-        default: throw new Error('this type there aren\'t');
-      }
-      this.keyboard.append(key.render());
-    });
+    this.keys.forEach((key) => { this.keyboard.append(key.render()); });
     return this.keyboard;
   }
 }
