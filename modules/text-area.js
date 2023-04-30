@@ -12,21 +12,33 @@ export default class TextArea {
   }
 
   addValue(value) {
-    const i = this.cursor;
-    this.value = this.value.slice(0, i)
+    if (this.textArea.selectionStart !== this.textArea.selectionEnd) {
+      this.delSub();
+    }
+    this.value = this.value.slice(0, this.cursor)
                           + value
-                          + this.value.slice(i);
+                          + this.value.slice(this.cursor);
     this.textArea.value = this.value;
     this.cursor += value.length;
     this.textArea.selectionStart = this.cursor;
     this.textArea.selectionEnd = this.cursor;
   }
 
+  delSub() {
+    this.cursor = this.textArea.selectionStart;
+    this.value = this.value.slice(0, this.textArea.selectionStart)
+                  + this.value.slice(this.textArea.selectionEnd);
+    this.textArea.value = this.value;
+    this.textArea.selectionStart = this.cursor;
+    this.textArea.selectionEnd = this.cursor;
+  }
+
   backspace() {
-    const i = this.cursor;
-    if (i > 0) {
-      this.value = this.value.slice(0, i - 1)
-                            + this.value.slice(i);
+    if (this.textArea.selectionStart !== this.textArea.selectionEnd) {
+      this.delSub();
+    } else if (this.cursor > 0) {
+      this.value = this.value.slice(0, this.cursor - 1)
+                            + this.value.slice(this.cursor);
       this.cursor -= 1;
       this.textArea.value = this.value;
       this.textArea.selectionStart = this.cursor;
@@ -35,10 +47,11 @@ export default class TextArea {
   }
 
   del() {
-    const i = this.cursor;
-    if (i > 0) {
-      this.value = this.value.slice(0, i)
-                            + this.value.slice(i + 1);
+    if (this.textArea.selectionStart !== this.textArea.selectionEnd) {
+      this.delSub();
+    } else {
+      this.value = this.value.slice(0, this.cursor)
+                            + this.value.slice(this.cursor + 1);
       this.textArea.value = this.value;
       this.textArea.selectionStart = this.cursor;
       this.textArea.selectionEnd = this.cursor;

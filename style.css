@@ -47,15 +47,18 @@ body {
     transition: .3s;
 }
 
+.key:hover {
+    background-color:#949292;
+}
+
 .modifier {
     background-color: #a79393;
 }
 
 .key:active,
 .active {
-    background-color:rgb(131, 129, 129);
+    background-color:#838181;
 }
-
 
 .key>span:nth-child(1) {
     position:absolute;    
