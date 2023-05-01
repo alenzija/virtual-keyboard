@@ -245,19 +245,19 @@
         }
     },
     {
-        "id": 62,
+        "id": 28,
         "type": "modifier",
         "code": "Delete",
         "name": "del"
     },
     {
-        "id": 28,  
+        "id": 29,  
         "type": "modifier",      
         "code": "CapsLock",
         "name": "caps lock"
     },
     {
-        "id": 29,  
+        "id": 30,  
         "type": "character",      
         "code": "KeyA",
         "languages": {
@@ -266,7 +266,7 @@
         }
     },
     {
-        "id": 63,  
+        "id": 31,  
         "type": "character",      
         "code": "KeyS",
         "languages": {
@@ -275,7 +275,7 @@
         }
     },
     {
-        "id": 30,  
+        "id": 32,  
         "type": "character",      
         "code": "KeyD",
         "languages": {
@@ -284,7 +284,7 @@
         }
     },
     {
-        "id": 31,  
+        "id": 33,  
         "type": "character",      
         "code": "KeyF",
         "languages": {
@@ -293,7 +293,7 @@
         }
     },
     {
-        "id": 32,  
+        "id": 34,  
         "type": "character",      
         "code": "KeyG",
         "languages": {
@@ -302,7 +302,7 @@
         }
     },
     {
-        "id": 33,  
+        "id": 35,  
         "type": "character",      
         "code": "KeyH",
         "languages": {
@@ -311,7 +311,7 @@
         }
     },
     {
-        "id": 34,  
+        "id": 36,  
         "type": "character",      
         "code": "KeyJ",
         "languages": {
@@ -320,7 +320,7 @@
         }
     },
     {
-        "id": 35,  
+        "id": 37,  
         "type": "character",      
         "code": "KeyK",
         "languages": {
@@ -329,7 +329,7 @@
         }
     },
     {
-        "id": 36,  
+        "id": 38,  
         "type": "character",      
         "code": "KeyL",
         "languages": {
@@ -338,7 +338,7 @@
         }
     },
     {
-        "id": 37,  
+        "id": 39,  
         "type": "character",      
         "code": "Semicolon",
         "languages": {
@@ -347,7 +347,7 @@
         }
     },
     {
-        "id": 38,  
+        "id": 40,  
         "type": "character",      
         "code": "Quote",
         "languages": {
@@ -356,19 +356,19 @@
         }
     },
     {
-        "id": 39,  
+        "id": 41,  
         "type": "modifier",      
         "code": "Enter",
         "name": "enter"
     },
     {
-        "id": 40,  
+        "id": 42,  
         "type": "modifier",      
         "code": "ShiftLeft",
         "name": "shift"
     },
     {
-        "id": 41,  
+        "id": 43,  
         "type": "character",      
         "code": "KeyZ",
         "languages": {
@@ -377,7 +377,7 @@
         }
     },
     {
-        "id": 42,  
+        "id": 44,  
         "type": "character",      
         "code": "KeyX",
         "languages": {
@@ -386,7 +386,7 @@
         }
     },
     {
-        "id": 70,  
+        "id": 45,  
         "type": "character",      
         "code": "KeyC",
         "languages": {
@@ -395,7 +395,7 @@
         }
     },
     {
-        "id": 43,  
+        "id": 46,  
         "type": "character",      
         "code": "KeyV",
         "languages": {
@@ -404,7 +404,7 @@
         }
     },
     {
-        "id": 44,  
+        "id": 47,  
         "type": "character",      
         "code": "KeyB",
         "languages": {
@@ -413,7 +413,7 @@
         }
     },
     {
-        "id": 45,  
+        "id": 48,  
         "type": "character",      
         "code": "KeyN",
         "languages": {
@@ -422,7 +422,7 @@
         }
     },
     {
-        "id": 46,  
+        "id": 49,  
         "type": "character",      
         "code": "KeyM",
         "languages": {
@@ -431,7 +431,7 @@
         }
     },
     {
-        "id": 47,  
+        "id": 50,  
         "type": "character",      
         "code": "Comma",
         "languages": {
@@ -440,7 +440,7 @@
         }
     },
     {
-        "id": 48,  
+        "id": 51,  
         "type": "character",      
         "code": "Period",
         "languages": {
@@ -449,7 +449,7 @@
         }
     },
     {
-        "id": 49,  
+        "id": 52,  
         "type": "character",      
         "code": "Slash",
         "languages": {
@@ -458,37 +458,37 @@
         }
     },
     {
-        "id": 59,  
+        "id": 53,  
         "type": "modifier",      
         "code": "ArrowUp",
         "name": "↑"
     },
     {
-        "id": 50,  
+        "id": 54,  
         "type": "modifier",      
         "code": "ShiftRight",
         "name": "shift"
     },
     {
-        "id": 51,  
+        "id": 55,  
         "type": "modifier",      
         "code": "ControlLeft",
         "name": "ctrl"
     },
     {
-        "id": 52,  
+        "id": 56,  
         "type": "modifier",      
         "code": "MetaLeft",
         "name": "win"
     },
     {
-        "id": 53,  
+        "id": 57,  
         "type": "modifier",      
         "code": "AltLeft",
         "name": "alt"
     },
     {
-        "id": 54,  
+        "id": 58,  
         "type": "character",      
         "code": "Space",
         "languages": {
@@ -497,32 +497,32 @@
         }
     },
     {
-        "id": 55,  
+        "id": 59,  
         "type": "modifier",      
         "code": "AltRight",
         "name": "alt"
     },
     {
-        "id": 58,  
+        "id": 60,  
         "type": "modifier",      
         "code": "ArrowLeft",
         "name": "←"
     },
 
     {
-        "id": 60,  
+        "id": 61,  
         "type": "modifier",      
         "code": "ArrowDown",
         "name": "↓"
     },
     {
-        "id": 61,  
+        "id": 62,  
         "type": "modifier",      
         "code": "ArrowRight",
         "name": "→"
     },
     {
-        "id": 56,  
+        "id": 63,  
         "type": "modifier",      
         "code": "ControlRight",
         "name": "ctrl"
