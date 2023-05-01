@@ -34,20 +34,20 @@ export default class Keyboard {
     });
   }
 
-  changeLanguage() {
-    this.lang = (this.lang === 'ru') ? 'en' : 'ru';
-    localStorage.setItem('lang', this.lang);
-    this.keys.forEach((key) => {
-      if (key.type === 'character') key.setLanguage(this.lang, this.isCapsLock);
-    });
-  }
-
   toggleCapsLock() {
     this.isCapsLock = !this.isCapsLock;
     this.keys.forEach((key) => {
       if (key.type === 'character') key.toggleCapsLock();
     });
     this.render();
+  }
+
+  changeLanguage() {
+    this.lang = (this.lang === 'ru') ? 'en' : 'ru';
+    localStorage.setItem('lang', this.lang);
+    this.keys.forEach((key) => {
+      if (key.type === 'character') key.setLanguage(this.lang, this.isCapsLock);
+    });
   }
 
   render() {

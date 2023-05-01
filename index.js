@@ -15,7 +15,7 @@ title.textContent = 'Virtual Keyboard';
 container.append(title);
 
 const textArea = new TextArea(10, 140);
-container.append(textArea.get());
+container.append(textArea.getHTMLElement());
 
 document.body.append(container);
 

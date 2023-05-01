@@ -21,16 +21,16 @@ export default class CharacterKey {
     }
   }
 
+  onClick(isShift) {
+    return isShift && this.values[1] !== '' ? this.values[1] : this.values[0];
+  }
+
   toggleCapsLock() {
     if (this.values[0].toUpperCase() !== this.values[0].toLowerCase()) {
       this.values[0] = this.values[0] === this.values[0].toUpperCase()
         ? this.values[0].toLowerCase()
         : this.values[0].toUpperCase();
     }
-  }
-
-  onClick(isShift) {
-    return isShift && this.values[1] !== '' ? this.values[1] : this.values[0];
   }
 
   render() {

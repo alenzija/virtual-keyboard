@@ -1,8 +1,8 @@
 export default class ModifierKey {
   constructor({ code, name, type }) {
     this.code = code;
-    this.name = name;
     this.type = type;
+    this.name = name;
   }
 
   render() {

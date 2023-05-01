@@ -152,7 +152,7 @@ export default class TextArea {
     this.textArea.selectionEnd = this.cursor;
   }
 
-  get() {
+  getHTMLElement() {
     this.textArea.classList.add('textarea');
     this.textArea.addEventListener('click', () => { this.cursor = this.textArea.selectionStart; });
     this.textArea.addEventListener('input', (e) => {
